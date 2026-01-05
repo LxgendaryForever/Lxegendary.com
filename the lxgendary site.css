@@ -1,0 +1,85 @@
+
+.Lxgendary-Background, .Lxgendary-Background-Mobile {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1; 
+  justify-content: center;
+  align-items: center;
+}
+
+.Lxgendary-Background-Mobile video {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .Lxgendary-Background {
+    display: block; 
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .Lxgendary-Background-Mobile {
+    display: block;
+  }
+}
+
+.Lxgendary-Links-Top, .Lxgendary-Links-Bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: fixed; 
+  z-index: 1; 
+  gap: 20px;
+  width: 100%; 
+  padding: min(5em, 1%); 
+  transform: scale(1, 1); 
+  transition: transform 0.3s ease;
+}
+
+.Lxgendary-Links-Top {
+  top: 15px;
+
+}
+
+.Lxgendary-Links-Bottom {
+  bottom: 40px;
+   
+}
+
+.Lxgendary-Links-Top img, .Lxgendary-Links-Bottom img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease; 
+}
+
+.Lxgendary-Links-Top img:hover, .Lxgendary-Links-Bottom img:hover {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+  .Lxgendary-Links-Top img, .Lxgendary-Links-Bottom img {
+    width: 100px;
+  }
+  .Lxgendary-Links-Top {
+    top: 25px;
+    left: -5px; 
+  }
+
+  .Lxgendary-Links-Bottom {
+    bottom: 40px; 
+    left: -5px;
+  }
+
+  .Lxgendary-Links-Top, .Lxgendary-Links-Bottom {
+    padding: min(3em, 1%); 
+  }
+}
+
